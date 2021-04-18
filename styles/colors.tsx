@@ -2,7 +2,11 @@
 
 export default {
     
-    primary: '#273c75',
+    primary: '#40739e',
+    background: '#f1f2f6',
+    yellow: '#fbc531',
+
+    grayTittle: '#dcdde1',
 
     // Basic
     white: '#FFFF',

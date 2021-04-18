@@ -6,9 +6,9 @@ import * as React from 'react';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import { header }  from '../styles';
-import { HomeScreen } from '../screens/HomeScreen';
-import { CatalogueScreen } from '../screens/CatalogueScreen';
-import { ProfileScreen } from '../screens/ProfileScreen';
+import HomeScreen  from '../screens/HomeScreen';
+import CatalogueScreen from '../screens/CatalogueScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 import { BottomTabParamList, HomeParamList, CatalogueParamList, ProfileParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
