@@ -12,6 +12,7 @@ import * as eva from '@eva-design/eva';
 import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
 import reducers from './reducers';
+import { colors } from './styles';
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -26,7 +27,7 @@ export default function App() {
         <ApplicationProvider {...eva} theme={eva.light}>
           <SafeAreaProvider>
             <Navigation colorScheme={colorScheme} />
-            <StatusBar />
+            <StatusBar style={'light'}/>
           </SafeAreaProvider>
         </ApplicationProvider>
       </Provider>

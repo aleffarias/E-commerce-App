@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, Image, View, StyleSheet } from 'react-native';
+import { Text, Image, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { Button, Icon, Layout } from '@ui-kitten/components';
 import { FavoriteIcon, ReviewsIcon } from './components/ReviewsIcon';
 import { colors } from '../../../styles';
@@ -13,40 +13,40 @@ export function ProductItem(props: any) {
       );
 
     return (
-        <View>
+        <TouchableOpacity>
+            <View>
+                <Image 
+                // ./../../../assets/images/productsImages/womanFashion/woman1.png
+                    source={{uri: product.image}}
+                    style={styles.image}
+                />
+                <View style={styles.containerButton}>
+                    <ReviewsIcon />
+                    <Button style={styles.favorite} appearance='ghost' status='basic' accessoryLeft={HeartIcon}/>
+                </View>
 
-            <Image 
-            // ./../../../assets/images/productsImages/womanFashion/woman1.png
-                source={{uri: product.image}}
-                style={styles.image}
-            />
-            <View style={styles.containerButton}>
-                <ReviewsIcon />
-                <Button style={styles.favorite} appearance='ghost' status='basic' accessoryLeft={HeartIcon}/>
+                <Text style={styles.description}>
+                    {product.description}
+                </Text>
+
+                <Text style={styles.price}>
+                    {'$' + product.price}
+                </Text>
             </View>
-
-            <Text style={styles.description}>
-                Description
-            </Text>
-
-            <Text style={styles.price}>
-                {'$' + product.price}
-            </Text>
-        </View>
+        </TouchableOpacity>
 
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+      //flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
     },
     containerButton: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginBottom: 8,
     },
     image: {
         height: 150,
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         marginRight: 10,
     },
     favorite: {
-        alignSelf: 'baseline',
+        //alignSelf: 'baseline',
         //backgroundColor: colors.white,
         height: 15,
         width: 15,
@@ -66,7 +66,8 @@ const styles = StyleSheet.create({
         height: 10,
     },
     description: {
-        fontSize: 12
+        marginTop: -10,
+        fontSize: 12,
     },
     price: {
         marginTop: 2,

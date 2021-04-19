@@ -19,7 +19,7 @@ export default function BottomTabNavigator() {
   return (
     <BottomTab.Navigator
       initialRouteName="Home"
-      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
+      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint, style:{borderTopStartRadius: 30, borderTopEndRadius: 30} }}>
       <BottomTab.Screen
         name="Home"
         component={HomeNavigator}
@@ -38,7 +38,7 @@ export default function BottomTabNavigator() {
         name="Profile"
         component={TabTwoNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="person-outline" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="person" color={color} />,
         }}
       />
     </BottomTab.Navigator>

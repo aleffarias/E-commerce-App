@@ -18,7 +18,7 @@ export function CatalogueMenu() {
                     <Button style={styles.button} onPress={() => ('')}>Women's Fashion</Button>
                     <Button style={styles.button} onPress={() => ('')}>Women's Fashion</Button>
                     <Button style={styles.button} onPress={() => ('')}>Women's Fashion</Button>
-                    <Button style={styles.button} onPress={() => ('')}>Women's Fashion</Button>
+                    <Button style={styles.button} onPress={() => ('')}>See All</Button>
                 </View>
             </ScrollView>
         </Layout>

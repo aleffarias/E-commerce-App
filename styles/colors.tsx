@@ -2,7 +2,7 @@
 
 export default {
     
-    primary: '#40739e',
+    primary: '#227093',
     background: '#f1f2f6',
     yellow: '#fbc531',
 
